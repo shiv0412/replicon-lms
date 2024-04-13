@@ -1,0 +1,39 @@
+@if(!isLoadingUserDetails){
+<div class="container-fluid p-3">
+  <!-- Landing page header details -->
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>Welcome {{ userDetails.userName }}</h2>
+    </div>
+    <div class="col-sm-12">
+      <div class="user-info-wrapper">
+        <span class="lighter-span">Employee ID - </span>
+        <span class="darker-span">{{ userDetails.userID }}</span>
+      </div>
+      <div class="user-info-wrapper">
+        <span class="lighter-span">Supervisor - </span>
+        <span class="darker-span"
+          >{{ userDetails.supervisor }} ({{ userDetails.supervisorID }})</span
+        >
+      </div>
+    </div>
+  </div>
+  <!-- Landing page details -->
+  <div class="row py-2">
+    <div class="col-sm-6 col-md-4">
+      <app-my-timesheets
+        [isLoadingTimesheet]="isLoadingTimesheet"
+        [userCurrentTimesheetDetails]="userCurrentTimesheetDetails"
+      ></app-my-timesheets>
+    </div>
+    <div class="col-sm-6 col-md-4"><app-my-time-offs></app-my-time-offs></div>
+    <div class="col-sm-6 col-md-4">
+      <div><app-my-approvals></app-my-approvals></div>
+      <div><app-my-schedule></app-my-schedule></div>
+    </div>
+  </div>
+</div>
+} @else {
+<!-- Loader here-->
+<p>Loading...</p>
+}

@@ -1,0 +1,49 @@
+<div class="row wrapper">
+  <div class="card-container">
+    <div class="col-sm-12 header-container">
+      <i class="bi bi-calendar2-event icon-class"></i>
+      <h4 class="header-text">My Timesheet</h4>
+    </div>
+    @if(!isLoadingTimesheet){
+    <div class="col-sm-12 details-container">
+      <div class="row">
+        <div class="col-sm-12 col-md-7">
+          <h5>Current Timesheet</h5>
+        </div>
+        <div class="col-sm-12 col-md-5 link-wrapper">
+          <a class="router-link" href=""
+            >All Timesheets <i class="bi bi-arrow-right-short"></i
+          ></a>
+        </div>
+      </div>
+      <div class="row card-details-wrapper">
+        <div class="col-sm-12 col-md-7">
+          <div class="date-period-wrapper">
+            <span
+              >{{ userCurrentTimesheetDetails.timesheetStartDate | formatDate }}
+              -
+              {{ userCurrentTimesheetDetails.timesheetEndDate | formatDate }}
+            </span>
+          </div>
+          <div class="due-date-wrapper">
+            <span
+              >Due:
+              {{
+                userCurrentTimesheetDetails.timesheetDueDate | formatDate
+              }}</span
+            >
+            <span>Hours: {{ userCurrentTimesheetDetails.billableHours }}</span>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-5 status-wrapper">
+          <span>{{ userCurrentTimesheetDetails.timesheetStatus }} </span>
+          <i class="bi bi-arrow-right-short"></i>
+        </div>
+      </div>
+    </div>
+    }@else{
+    <!-- Loader -->
+    <p>Loading...</p>
+    }
+  </div>
+</div>

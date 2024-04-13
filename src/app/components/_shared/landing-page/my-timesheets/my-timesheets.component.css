@@ -1,0 +1,89 @@
+div.wrapper {
+  padding: 8px;
+}
+
+div.card-container {
+  padding: 0;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+}
+
+.header-container {
+  padding: 16px 16px;
+  position: relative;
+  border-bottom: 1px solid #d5d8dc;
+}
+
+.header-text {
+  display: inline-block;
+  padding-left: 32px;
+  padding-top: 4px;
+}
+
+.icon-class {
+  position: absolute;
+  font-size: 20px;
+  top: 19px;
+}
+
+.details-container {
+  padding: 16px 16px;
+}
+
+.link-wrapper {
+  position: relative;
+  text-align: right;
+  padding-right: 24px;
+}
+
+.link-wrapper i {
+  font-size: 16px;
+  position: absolute;
+  top: 2px;
+}
+
+.router-link {
+  font-size: 12px;
+  text-decoration: none;
+  color: #5dade2;
+}
+
+.date-period-wrapper span:nth-child(1) {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.card-details-wrapper {
+  padding: 8px 0 16px 0;
+}
+
+.due-date-wrapper {
+  font-size: 12px;
+}
+
+.due-date-wrapper span:nth-child(1) {
+  font-size: 12px;
+  padding-right: 16px;
+}
+
+.status-wrapper {
+  padding-top: 16px;
+  padding-right: 32px;
+  position: relative;
+  text-align: right;
+}
+
+.status-wrapper i {
+  position: absolute;
+  right: 8px;
+  font-size: 24px;
+  top: 10px;
+}
+
+.status-wrapper span {
+  background: lightblue;
+  padding: 6px 8px;
+  font-size: 14px;
+  border-radius: 50px;
+}
